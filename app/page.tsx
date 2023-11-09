@@ -1,9 +1,8 @@
 'use client'
 import { db } from './firebaseCongif';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, getDocs } from 'firebase/firestore';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { isNumber } from 'util';
 
 async function addDataToFirestore( name: string, email: string, phone: number, message: string ){
   try {
@@ -22,11 +21,32 @@ async function addDataToFirestore( name: string, email: string, phone: number, m
   }
 }
 
+async function fetchDataFromFirestore(){
+  const querySnapshot = await getDocs(collection(db, "messages"))
+
+  const data: any=[];
+  querySnapshot.forEach((doc)=>{
+    data.push({id: doc.id, ...doc.data()});
+  });
+
+  return data;
+}
+
 export default function Home() {
   const [name,setName] = useState("");
   const [email,setEmail] = useState("");
   const [phone,setPhone] = useState(0);
   const [message,setMessage] = useState("");
+
+  const [userData, setUserData] = useState([]);
+
+  useEffect(()=>{
+    async function fetchData(){
+      const data = await fetchDataFromFirestore();
+      setUserData(data);
+    }
+    fetchData();
+  },[]);
 
   const handleSubmit = async (e:any)=>{
     e.preventDefault();
@@ -40,6 +60,7 @@ export default function Home() {
       alert("Data Added to Firestore Succesfully!")
     }
   }
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       {/* <>
@@ -149,6 +170,17 @@ export default function Home() {
           </a>
         </div>
       </> */}
+
+      <h1>Data Fetched from Firestore</h1>
+      {userData.map((item:any)=>(
+        <div key={item.id} className='mb-4'>
+          <p className='text-xl font-bold'>{item.name}</p>
+          <p className='text-xl font-bold'>{item.email}</p>
+          <p className='text-xl font-bold'>{item.phone}</p>
+          <p className='text-xl font-bold'>{item.message}</p>
+        </div>
+      ))}
+
       <h1 className="text-5x1 font-bold m-10">
         Add data to Firestore
       </h1>
