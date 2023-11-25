@@ -3,6 +3,42 @@
 @tailwind utilities;
 
 :root {
+  --basecolor: 0,0,0;
+  --fontcolor: 255,255,255;
+  --bluemateX: 47,79,79;
+  --bluemate: 40,60,70;
+  --bluemate2: 74,97,138;
+  --whitemate: 246, 246, 250;
+  --white: 255,255,255;
+  --black: 0,0,0;
+  --darkredmate: 78, 51, 60;
+  --bluemate2: 38, 60, 97;
+  --myBlack: 7,14,21;
+  --blackmate: 17,24,39;
+  --graymate: 31,41,55;
+  --graymate2: 96,110,135;
+  --blueskymate: 50,138,241;
+  --orangemate: 240,59,45;
+  --orangemate2: 239,70,80;
+  --orangemate3: 247,172,40;
+  --redX: 144,0,0;
+  --greenmate: 48,183,154;
+  --yellowmate: 245,165,35;
+  --purplemate: 150,101,224;
+  --basecolor: 0,0,0;
+  --fontcolor: 255,255,255;
+  /*Redes Sociales*/
+  --instagramX:#cf5151;
+  --facebookX:rgb(18,12,142);
+  --whatsappX:#10b41e;
+  --twitterX:#3ae2f3;
+  --youtubeX:rgb(128,0,0);
+  /*Transitions delays*/
+  --vfast: 140ms;
+  --fast: 210ms;
+  --norm: 350ms;
+  --slow: 1000ms;
+  --vslow: 2100ms;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;

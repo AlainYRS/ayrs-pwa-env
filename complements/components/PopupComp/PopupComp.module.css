@@ -1,0 +1,98 @@
+.MsgContainer{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    background-color: rgb(var(--bluemate),0.35);
+}
+.Msg{
+    position: fixed;
+    width: auto;
+    max-width: 320px;
+    height: auto;
+    padding: 0 21px;
+    max-height: 100vh;
+    top: 7%;
+    margin: auto;
+    background-color: rgb(var(--bluemate),1);
+    border:1px solid rgb(var(--white),1);
+    box-shadow: 1px 1px 1px 1px rgb(var(--white),0.3);
+    border-radius: 7px;
+    text-align: center;
+    padding: 0.3rem 0;
+    z-index: 7;
+}
+.CloseMsg{
+    position: absolute;
+    width: 21px;
+    border-radius: 0 7px;
+    padding: 3.5px;
+    background-color: rgb(var(--whitemate),0.3);
+    color: rgb(var(--whitemate),0.7);
+    text-align: center;
+    top: 0px;
+    cursor: pointer;
+    right: 0px;
+}
+.Msg h1{
+    text-align: center;
+    padding: 0.5rem;
+    color: rgb(var(--whitemate),1);
+    margin: 7px;
+    font-weight: lighter;
+}
+.description{
+    max-height: 70vh;
+    overflow: auto;
+    padding: 0 0.35rem;
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 1.2rem;
+    background-color: rgb(var(--blackmate),0.7);
+    border:1px solid rgb(var(--white),0.3);
+    color: rgb(var(--whitemate),1);
+}
+.description p,
+.description a{
+    font-size: 0.7rem;
+}
+.description a{
+    text-decoration: underline;
+    font-style: italic;
+    cursor: pointer;
+}
+.Msg button{
+    margin: 7px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    border-radius: 7px;
+    padding: 0.35rem 0.7rem;
+    color: rgb(var(--white),1);
+    background-color: rgb(var(--black),0.7);
+    border: 1px solid rgb(var(--white),0.5);
+}
+.PlayerBtn{
+    font-size: 0.7rem;
+    padding: 3px 4px;
+    cursor: pointer;
+    color: rgb(var(--white),1);
+    border-bottom: 1px solid rgb(var(--white),0.3);
+}
+.VideoContainer{
+    overflow: hidden;
+    width: 98%;
+    height: max-content;
+    margin: 7px auto 0px auto;
+    border-radius: 7px;
+    position: relative;
+}
+.blocker{
+    position: absolute;
+    background-color: none;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}

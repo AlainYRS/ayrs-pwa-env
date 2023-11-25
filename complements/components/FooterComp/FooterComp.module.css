@@ -1,0 +1,51 @@
+.AppFooter{ /*Footer Component style*/
+    width: 100%;
+    background-color: rgb(var(--basecolor));
+    border-top: 1px solid rgba(var(--fontcolor),.1);
+    color: rgba(var(--fontcolor),1);
+    text-align: center;
+    transition: var(--norm);
+    align-items: center;
+    padding: 1rem;
+}
+.SocialMed{
+    width: max-content;
+    padding: 0.3rem 0.7rem;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.MapSiteLink{
+    padding: 0.35rem;
+    margin: 2px;
+    font-size: clamp(10px, 0.7rem, 21px);
+    width: max-content;
+    border-radius: 7px;
+    transition: var(--fast);
+}
+.MapSiteLink:hover{
+    background-color: rgba(var(--fontcolor),1);
+    color: rgba(var(--basecolor),1);
+    text-decoration: underline;
+}
+.Mapsite{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    height: clamp(3rem, 7rem, 14rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.ContactBotton{
+    padding: 7px;
+    border-radius: 7px;
+    border: 1px solid rgba(255,255,255,.35);
+    background-color: none;
+    transition: var(--norm);
+}
+.ContactBotton:hover{
+    border: 1px solid rgba(255,255,255,1);
+    text-shadow: 1px 1px 7px white;
+}

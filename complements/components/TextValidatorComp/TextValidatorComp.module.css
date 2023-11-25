@@ -1,0 +1,10 @@
+.Validator{
+    display: block;
+    text-align: center;
+}
+.TextToValidate{
+    border-radius: 4px;
+    padding: 3px;
+    color: black;
+    resize: none;
+}

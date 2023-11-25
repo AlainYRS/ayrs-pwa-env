@@ -1,0 +1,154 @@
+#ImgCompContainer{
+    width: max-content;
+    max-width: 95%;
+    min-width: 110px;
+    min-height: 114px;
+    position: relative;
+    border-radius: 14px;
+    margin: 2.8rem auto;
+    padding: 7px;
+    background-color: rgb(var(--basecolor),1);
+    color:white;
+    transition: var(--fastrans);
+    overflow: auto;
+}
+.ImageSelector{
+    border: 1px dashed rgb(210,210,210,0.21);
+    position: relative;
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    margin: 0px 3.5px 7px 3.5px;
+    font-size: 0.8rem;
+    border-radius: 7px;
+    overflow: hidden;
+}
+.FileSelector{
+    visibility: hidden;
+}
+.ImgCompForm{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content:space-evenly;
+}
+.SelLabel{
+    display: block;
+    cursor: pointer;
+    padding: 3.5px;
+    width: 100%;
+    height: 100%;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    text-align: center;
+}
+.ImgPreview{
+    position: relative;
+    margin: 0px 3.5px 7px 3.5px;
+    width: 100px;
+    height: 100px;
+    font-size: 0.8rem;
+    border-radius: 7px;
+    overflow: hidden;
+}
+#blockquote::after {
+    content: attr(cite);
+    position: absolute;
+    right: 0;
+    text-align: center;
+    transition: var(--fastrans);
+    z-index: 1;
+    border: 1px solid rgb(var(--redX),0.7);
+    width: 100%;
+    height: 100%;
+    line-height: 100px;
+    cursor:alias;
+    border-radius: 7px;
+    color: white;
+    font-weight: 300;
+    background-color: rgb(var(--myBlack),0.6);
+    animation: SellAttraction calc(var(--slotrans)*1.4) 0s infinite;
+    display: block;
+}
+.blockquoteLogo::before {
+    content: attr(cite);
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: max-content;
+    height: max-content;
+    line-height: 1.4rem;
+    background-color: rgb(var(--myBlack),0.35);
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    border-radius: 0 7px;
+    padding: 1px 2.5px;
+    display: block;
+    color: white;
+    font-size: medium;
+    font-weight: 300;
+}
+.SpanContain{
+    position: relative;
+    overflow: hidden;
+    border-radius: 7px;
+    margin: 0px 3.5px 7px 3.5px;
+}
+.SpanDelete::before{
+    content: 'x';
+    position: absolute;
+    z-index: 1;
+    width: 28px;
+    height: 28px;
+    background-color: rgb(var(--bluemate),0.35);
+    right: 0px;
+    top: 0px;
+    border-radius:  0 7px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--fastrans);
+}
+#SubmitImages{
+    display: block;
+    width: max-content;
+    margin: auto;
+    padding: 7px;
+    border-radius: 12px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid rgb(var(--fontcolor),0.21);
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    box-shadow: 1px 1px 3.5px rgb(var(--fontcolor),0.1);
+    transition: var(--fastrans);
+    color: rgb(var(--fontcolor),1);
+}
+#SubmitImages:hover{
+    background-color: rgb(var(--bluemate),0.7);
+    text-shadow: 7px 7px 7px rgb(var(--basecolor),1);
+    border: 1px solid white;
+}
+.SpanVerified::before{
+    display: none;
+}
+.SpanVerified{
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    width: 25px;
+    height: 21px;
+    border-radius: 0 7px;
+    color: white;
+    background-color: rgb(var(--fontcolor),0.70);
+}
+.ImgVerified{
+    width: 100%;
+    height: 100%;
+}
+@keyframes SellAttraction{
+    50%{opacity: 0.7}
+    100%{opacity: 1}
+}

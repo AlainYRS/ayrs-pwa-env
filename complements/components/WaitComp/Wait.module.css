@@ -1,0 +1,188 @@
+.Loading,
+.Success,
+.Failed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 700;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(10,10,10,0.7);
+    opacity: 1;
+}
+.Loading img:first-child,
+.Success img:first-child{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}
+.Failed img:first-child{
+    position: fixed;
+    width: 110px;
+    height: 110px;
+    cursor: pointer;
+    top: calc(50% - 55px);
+    left: calc(50% - 55px);
+}
+.Failed img:nth-of-type(2),
+.Failed img:nth-of-type(3){
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    opacity: 0.35;
+}
+.Loading img:last-child,
+.Success img:last-child,
+.Failed img:last-child{
+    position: fixed;
+    width: 140px;
+    height: 140px;
+    top: calc(50% - 70px);
+    left: calc(50% - 70px);
+}
+.Loading{
+    animation: ShowingUp var(--fastrans) linear forwards;
+}
+@keyframes ShowingUp {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.Loading img:last-child{
+    animation: loadingneg calc(var(--fastrans)*2.1) linear infinite;
+}
+@keyframes loadingneg {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
+.Success{
+    animation: ShowingSuccess calc(var(--fastrans)*1.4) linear forwards;
+}
+@keyframes ShowingSuccess {
+    0% {
+        width: 100px;
+        height: 100px;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+        opacity: 1;
+        background-color: transparent;
+        border-radius: 50%;
+    }
+    100% {
+        width: 230px;
+        height: 230px;
+        top: calc(50% - 115px);
+        left: calc(50% - 115px);
+        opacity: 0;
+        background-color: transparent;
+        border-radius: 50%;
+    }
+}
+.Success img:first-child{
+    animation: ShowingSuccessDown calc(var(--fastrans)*1.4) linear forwards;
+}
+@keyframes ShowingSuccessDown {
+    0% {
+        width: 130px;
+        height: 130px;
+        top: calc(50% - 65px);
+        left: calc(50% - 65px);
+        opacity: 1;
+    }
+    100% {
+        width: 70px;
+        height: 70px;
+        top: calc(50% - 35px);
+        left: calc(50% - 35px);
+        opacity: 0;
+    }
+}
+.Success img:last-child{
+    animation: loadingSuccess calc(var(--fastrans)*1.4) linear forwards;
+}
+@keyframes loadingSuccess {
+    0% {
+        width: 180px;
+        height: 180px;
+        top: calc(50% - 90px);
+        left: calc(50% - 90px);
+        opacity: 1;
+    }
+    100% {
+        width: 280px;
+        height: 280px;
+        top: calc(50% - 140px);
+        left: calc(50% - 140px);
+        opacity: 0;
+    }
+}
+.Failed img:last-child{
+    animation: loadingneg var(--medtrans) linear infinite;
+}
+.Failed img:nth-of-type(3){
+    animation: loadingpos calc(var(--slotrans)*1.4) linear infinite;
+}
+@keyframes loadingpos {
+    0% {transform: rotate(0deg);opacity: 0.21;}
+    100% {transform: rotate(360deg);opacity: 0.21;}
+}
+.Failed{
+    animation: ShowingOff var(--medtrans) linear forwards;
+    animation: ShowingFail var(--medtrans) linear forwards;
+}
+@keyframes ShowingOff {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes ShowingFail {
+    0% {
+        width: 130px;
+        height: 130px;
+        top: calc(50% - 65px);
+        left: calc(50% - 65px);
+        opacity: 0.77;
+        border: 1px solid gray;
+    }
+    50% {
+        width: 230px;
+        height: 230px;
+        top: calc(50% - 115px);
+        left: calc(50% - 115px);
+        opacity: 1;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px solid darkred;
+    }
+    100% {
+        width: 130px;
+        height: 130px;
+        top: calc(50% - 67.5px);
+        left: calc(50% - 67.5px);
+        opacity: 0;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px solid  black;
+    }
+}
+.Failed img:nth-of-type(2){
+    animation: ShowingFailedUp var(--medtrans) linear forwards;
+}
+@keyframes ShowingFailedUp {
+    0% {
+        width: 130px;
+        height: 130px;
+        top: calc(50% - 65px);
+        left: calc(50% - 65px);
+        opacity: 1;
+    }
+    100% {
+        width: 70px;
+        height: 70px;
+        top: calc(50% - 35px);
+        left: calc(50% - 35px);
+        opacity: 0;
+    }
+}

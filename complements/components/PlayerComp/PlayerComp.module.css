@@ -1,0 +1,114 @@
+.blocker{
+    position: absolute;
+    background-color: none;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.PlayerScreen{
+    background-color: rgb(10,10,10,1);
+    border: 1px solid whitesmoke;
+    border-radius: 14px;
+    overflow: hidden;
+    z-index: 35;
+    margin: auto;
+    min-width: 140px;
+    min-height: 70px;
+}
+.PlayerScreenMaximized{
+    border-radius: 0px;
+}
+.PlayerContainer{
+    width: 100%;
+    height: 100%;
+}
+.Screen{
+    margin: auto;
+}
+.PlayerScreen span{
+    position: absolute;
+    width: 7%;
+    height: 21px;
+    color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+}
+#TopLeft{
+    top: 0;
+    left: 0;
+    rotate: 45deg;
+}
+#TopRight{
+    top: 0;
+    right: 0;
+    rotate: -45deg;
+}
+#BotttomRight{
+    bottom: 0;
+    right: 0;
+    rotate: 45deg;
+}
+#BotttomLeft{
+    bottom: 0;
+    left: 0;
+    rotate: -45deg;
+}
+#BotttomLeft,
+#BotttomRight,
+#TopLeft,
+#TopRight{
+    border-radius: 70px;
+    color: rgb(255,255,255,0.35);
+}
+.Default{
+    left: 0px;
+    border-radius: 100%;
+    opacity: 0.7;
+    margin: 4px;
+    top: calc(50% - 12px);
+}
+.ClosePlayer{
+    right: 0px;
+    border-radius: 100%;
+    opacity: 0.35;
+    margin: 4px;
+    top: calc(50% - 12px);
+}
+.Maximize{
+    top: 0px;
+    margin: 4px;
+    left: calc(50% - 12px);
+    border-radius: 3px;
+    opacity: 0.4;
+}
+.Minimize{
+    bottom: 0px;
+    margin: 4px;
+    left: calc(50% - 12px);
+    border-radius: 3px;
+    opacity: 0.4;
+}
+.ClosePlayer,
+.Default,
+.Maximize,
+.Minimize{
+    position: absolute;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    transition: 300ms;
+}
+.ClosePlayer:hover,
+.Default:hover,
+.Maximize:hover,
+.Minimize:hover,
+#BotttomLeft:hover,
+#BotttomRight:hover,
+#TopLeft:hover,
+#TopRight:hover{
+    background-color: rgb(245,245,245,1);
+    opacity: 1;
+    color: rgb(10,10,10,1);
+    transition: 300ms;
+}

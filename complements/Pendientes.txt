@@ -1,0 +1,15 @@
+* CRUD de Json Objects en Firestore
+* Storage de Imagenes, Documentos y Multimedia a Firebase Storage
+* Reproductos de videos para Tutoriales
+* Autenticacion de usuarios
+* Website
+* Contenido y Videos
+* NPO
+* Comercializar Publicidad a comunidad
+* Hacer paginas Web
+* Reclutar Matricula educativa
+* Organizar Intercambios o Certificaciones en Latinoamerica
+* Checklist de avance
+* Ventas Online
+* Mapas de Google y My Maps
+* Vinculos a sitios de interes 
